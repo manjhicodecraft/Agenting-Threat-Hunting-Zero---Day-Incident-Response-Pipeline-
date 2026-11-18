@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-soc-bg text-slate-100 font-sans antialiased;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.35);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #24324a transparent;
+  }
+}
+
+@layer components {
+  .table-cell-base {
+    @apply px-4 py-3 text-sm whitespace-nowrap;
+  }
+
+  .input-base {
+    @apply w-full rounded-lg border border-soc-border bg-soc-bg/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 transition-colors duration-200 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/25;
+  }
+}
